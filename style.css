@@ -1,0 +1,44 @@
+/* ==== GLOBAL === */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+body.dark{background:#000;color:#fff}
+body.light{background:#fff;color:#111}
+canvas{display:block;width:100vw;height:100vh}
+
+/* ==== GLASS PANEL === */
+.glass{
+  position:absolute;top:16px;left:16px;z-index:20;
+  padding:18px 22px;border-radius:16px;max-height:85vh;
+  overflow-y:auto;backdrop-filter:blur(10px) saturate(180%);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  transition:.3s;
+}
+body.light .glass{
+  background:rgba(255,255,255,.7);border-color:rgba(0,0,0,.1);
+  color:#111;
+}
+
+/* ==== LABELS + SLIDERS === */
+#controls label{display:inline-block;width:90px;margin:8px 0 4px}
+#controls input[type=range]{
+  width:120px;margin-bottom:10px;
+  accent-color:#00e5ff;
+}
+
+/* ==== BUTTONS === */
+.btn{
+  position:absolute;top:16px;right:16px;
+  background:#111;color:#fff;border:none;outline:0;
+  padding:8px 14px;border-radius:8px;cursor:pointer;z-index:20;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);transition:.3s;
+}
+.btn:nth-of-type(2){right:110px;}          /* pause btn sits left */
+body.light .btn{background:#f0f0f0;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.btn:hover{transform:translateY(-2px)}
+
+/* ==== TOOLTIP === */
+#tooltip{
+  position:absolute;padding:6px 10px;border-radius:6px;font-size:13px;
+  background:rgba(0,0,0,.8);color:#fff;pointer-events:none;display:none;z-index:25;
+  transition:.15s;
+}
+body.light #tooltip{background:rgba(0,0,0,.75);color:#fff}
