@@ -16,6 +16,10 @@ This project is a **mobile-responsive 3D simulation** of the solar system, built
 ✅ **Camera zoom on click** to focus on any planet  
 ✅ Fully responsive and modern UI  
 
+##Preview
+<img width="1916" height="963" alt="image" src="https://github.com/user-attachments/assets/db5ce7b3-c88e-4954-b894-e06447303171" />
+
+
 ## 📁 Folder Structure
 
 📦 SolarSystem/
